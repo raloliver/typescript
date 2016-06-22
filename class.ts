@@ -1,26 +1,40 @@
 /**
- * Customer
+ * Person
  */
-class Customer {
-    private _name: string;
-    constructor(public myname: string) {
-        this._name = myname;
+class Person {
+    constructor(public document: string) {
+        
     }
-
-    
-    public get name() : string {
-        return this._name
-    }
-
-    
-    public set name(newName : string) {
-        this._name = newName;
-    }
-    
-    
 }
 
-var c = new Customer('Laura');
+/**
+ * Company
+ */
+class Company {
+    constructor(public companyName: string) {
+        
+    }
+}
 
-c.name = 'Fernanda';
-console.log(c.name);
+/**
+ * Customer
+ */
+class Customer extends Person {
+    // exemplo de variável estática
+    static badges: number = 0;
+    private _name: string;
+    constructor(public name: string, public document: string) {        
+        super(document);
+        this._name = name;
+        Customer.badges;
+    }    
+    // definição de método anônimo (void)
+    // aqui posso usar todos os tipos
+    register(): void {
+       
+    }
+}
+
+var c = new Customer('Laura','2345678');
+c.register();
+Customer.badges;
