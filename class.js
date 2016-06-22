@@ -13,6 +13,17 @@ var Person = (function () {
     return Person;
 }());
 /**
+ * TechCompany
+ */
+var TechCompany = (function () {
+    function TechCompany(companyName) {
+        this.companyName = companyName;
+    }
+    TechCompany.prototype.register = function () {
+    };
+    return TechCompany;
+}());
+/**
  * Company
  */
 var Company = (function () {
@@ -41,6 +52,7 @@ var Customer = (function (_super) {
     Customer.badges = 0;
     return Customer;
 }(Person));
-var c = new Customer('Laura', '2345678');
-c.register();
+var company = new Company('AMDE');
+var customer = new Customer('Laura', '2345678');
+customer.register();
 Customer.badges;

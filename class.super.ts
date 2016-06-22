@@ -7,22 +7,6 @@ class Person {
     }
 }
 
-interface ICompany extends Company {
-    register(): void;
-}
-
-/**
- * TechCompany
- */
-class TechCompany implements ICompany {
-    constructor(public companyName: string) {
-        
-    }
-    register(): void {
-
-    }
-}
-
 /**
  * Company
  */
@@ -51,7 +35,6 @@ class Customer extends Person {
     }
 }
 
-var company     = new Company ('AMDE'); 
-var customer    = new Customer('Laura','2345678');
-customer.register();
+var c = new Customer('Laura','2345678');
+c.register();
 Customer.badges;
